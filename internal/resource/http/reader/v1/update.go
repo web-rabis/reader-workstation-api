@@ -9,6 +9,7 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"
+
 	"github.com/web-rabis/httperrors"
 	readerModel "github.com/web-rabis/reader-client/model"
 	"github.com/web-rabis/reader-workstation-api/internal/manager/auth"
@@ -16,18 +17,20 @@ import (
 	"github.com/web-rabis/reader-workstation-api/internal/utils"
 )
 
-// @Summary Dictionary Sex
-// @Description Dictionary Sex
+// @Summary Update Reader
+// @Description Updates a reader's data by their ticket number
 // @Accept json
 // @Produce json
-// @Tags Dictionary
-// @Success 200 {object} reader.Dictionary
+// @Tags Reader
+// @Param id path int true "Reader Ticket Number"
+// @Param body body dto.UpdateReaderRequest true "Request"
+// @Success 200 {string} string "OK"
 // @Failure 400 {object} httperrors.Response
 // @Failure 401 {object} httperrors.Response
 // @Failure 403 {object} httperrors.Response
 // @Failure 404 {object} httperrors.Response
 // @Failure 500 {object} httperrors.Response
-// @Router /admin/api/v1/auth/sign-in [get]
+// @Router /api/v1/reader/{id} [put]
 func (res *Resource) update(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
 	if id == "" {

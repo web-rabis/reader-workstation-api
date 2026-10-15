@@ -6,23 +6,34 @@ import (
 	"time"
 
 	"github.com/go-chi/render"
+
 	"github.com/web-rabis/httperrors"
 	readerModel "github.com/web-rabis/reader-client/model"
 	"github.com/web-rabis/reader-workstation-api/internal/resource/http/reader/v1/dto"
 )
 
-// @Summary Dictionary Sex
-// @Description Dictionary Sex
+// @Summary List Readers
+// @Description Returns a paginated and filterable list of readers
 // @Accept json
 // @Produce json
-// @Tags Dictionary
-// @Success 200 {object} reader.Dictionary
+// @Tags Reader
+// @Param status query string false "Reader status"
+// @Param iin query string false "Reader IIN"
+// @Param query query string false "Search query"
+// @Param isEmployee query bool false "Filter by employee flag"
+// @Param expirationDateLow query string false "Expiration date from (YYYY-MM-DD)"
+// @Param expirationDateHigh query string false "Expiration date to (YYYY-MM-DD)"
+// @Param limit query int false "Page size"
+// @Param skip query int false "Page number"
+// @Param order query int false "Sort order: 1 or -1"
+// @Param orderBy query string false "Sort key"
+// @Success 200 {object} dto.ReaderListResponse
 // @Failure 400 {object} httperrors.Response
 // @Failure 401 {object} httperrors.Response
 // @Failure 403 {object} httperrors.Response
 // @Failure 404 {object} httperrors.Response
 // @Failure 500 {object} httperrors.Response
-// @Router /admin/api/v1/auth/sign-in [get]
+// @Router /api/v1/reader [get]
 func (res *Resource) list(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
 	paging, err := PagingParse(r)

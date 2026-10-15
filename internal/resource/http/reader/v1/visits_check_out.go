@@ -4,22 +4,24 @@ import (
 	"net/http"
 
 	"github.com/go-chi/render"
+
 	"github.com/web-rabis/httperrors"
 	ordermodel "github.com/web-rabis/order-client/model"
 )
 
-// @Summary Dictionary Sex
-// @Description Dictionary Sex
+// @Summary Reader Check-Out
+// @Description Registers a reader's check-out visit from the reading hall
 // @Accept json
 // @Produce json
-// @Tags Dictionary
-// @Success 200 {object} reader.Dictionary
+// @Tags Reader
+// @Param id path int true "Reader Ticket Number"
+// @Success 200 {string} string "OK"
 // @Failure 400 {object} httperrors.Response
 // @Failure 401 {object} httperrors.Response
 // @Failure 403 {object} httperrors.Response
 // @Failure 404 {object} httperrors.Response
 // @Failure 500 {object} httperrors.Response
-// @Router /admin/api/v1/auth/sign-in [get]
+// @Router /api/v1/reader/{id}/visits/check-out [post]
 func (res *Resource) visitsCheckOut(w http.ResponseWriter, r *http.Request) {
 	reader, err := res.readerCheckInOut(r, "*********")
 	if err != nil {

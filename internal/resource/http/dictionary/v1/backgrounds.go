@@ -7,9 +7,23 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"
+
 	"github.com/web-rabis/httperrors"
 )
 
+// @Summary Dictionary Type Card Backgrounds
+// @Description Returns the background photo for the given type card id
+// @Accept json
+// @Produce json
+// @Tags Dictionary
+// @Param id path int true "Type Card ID"
+// @Success 200 {string} string "binary"
+// @Failure 400 {object} httperrors.Response
+// @Failure 401 {object} httperrors.Response
+// @Failure 403 {object} httperrors.Response
+// @Failure 404 {object} httperrors.Response
+// @Failure 500 {object} httperrors.Response
+// @Router /api/v1/dictionary/type-card/{id}/backgrounds [get]
 func (res *Resource) backgrounds(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
 	if id == "" {

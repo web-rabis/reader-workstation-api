@@ -9,8 +9,8 @@ import (
 
 type ServerConfig struct {
 	ListenAddr string `short:"l" long:"listen" env:"LISTEN" description:"Listen Address (format: :8080|127.0.0.1:8080)" required:"false" default:":9191"`
-	BasePath   string `long:"base-path" env:"BASE_PATH" description:"base path of the host" required:"false" default:"/reader"`
-	FilesDir   string `long:"files-directory" env:"FILES_DIR" description:"Directory where all static files are located" required:"false" default:"/usr/share/reader"`
+	BasePath   string `long:"base-path" env:"BASE_PATH" description:"base path of the host" required:"false" default:"/reader-workstation-api"`
+	FilesDir   string `long:"files-directory" env:"FILES_DIR" description:"Directory where all static files are located" required:"false" default:"/usr/share/api"`
 	CertFile   string `short:"c" long:"cert" env:"CERT_FILE" description:"Location of the SSL/TLS cert file" required:"false" default:""`
 	KeyFile    string `short:"k" long:"key" env:"KEY_FILE" description:"Location of the SSL/TLS key file" required:"false" default:""`
 

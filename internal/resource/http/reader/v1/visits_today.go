@@ -5,23 +5,24 @@ import (
 	"time"
 
 	"github.com/go-chi/render"
+
 	"github.com/web-rabis/httperrors"
 	readerModel "github.com/web-rabis/reader-client/model"
 	"github.com/web-rabis/reader-workstation-api/internal/resource/http/reader/v1/dto"
 )
 
-// @Summary Dictionary Sex
-// @Description Dictionary Sex
+// @Summary Visits Today
+// @Description Returns a paginated list of readers currently checked into the hall today
 // @Accept json
 // @Produce json
-// @Tags Dictionary
-// @Success 200 {object} reader.Dictionary
+// @Tags Reader
+// @Success 200 {object} dto.VisitsTodayResponse
 // @Failure 400 {object} httperrors.Response
 // @Failure 401 {object} httperrors.Response
 // @Failure 403 {object} httperrors.Response
 // @Failure 404 {object} httperrors.Response
 // @Failure 500 {object} httperrors.Response
-// @Router /admin/api/v1/auth/sign-in [get]
+// @Router /api/v1/reader/visits/today [get]
 func (res *Resource) visitsToday(w http.ResponseWriter, r *http.Request) {
 	exitDateIsNull := true
 	start, end := DayRangeHalfOpen(time.Now())

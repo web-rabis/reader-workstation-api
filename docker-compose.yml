@@ -12,13 +12,14 @@ services:
         - https_proxy
         - no_proxy
     ports:
-      - "8587:8587"
-      - "8907:8907"
-      - "7587:7587"
+      - "8594:8594"
     environment:
-      - LISTEN=:8587
-      - GRPC_LISTEN=:8907
-      - METRICS_LISTEN=:7587
+      - LISTEN=:8594
+      - READER_GRPC_ADDRESS=nlrk-reader:8906
+      - ORDER_GRPC_ADDRESS=nlrk-reader:8909
+      - EBOOK_GRPC_ADDRESS=nlrk-reader:8911
+      - SSO_GRPC_ADDRESS=nlrk-reader:8908
+      - BASE_PATH=/
       - DEBUG=1
     networks:
       - web_rabis_network

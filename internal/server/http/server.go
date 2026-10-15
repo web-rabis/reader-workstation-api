@@ -6,6 +6,9 @@ import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 	"github.com/go-chi/cors"
+	swaggerV1 "github.com/web-rabis/reader-workstation-api/internal/resource/http/swagger/v1"
+
+	"github.com/web-rabis/reader-workstation-api/internal/config"
 	"github.com/web-rabis/reader-workstation-api/internal/manager/auth"
 	"github.com/web-rabis/reader-workstation-api/internal/manager/control"
 	"github.com/web-rabis/reader-workstation-api/internal/manager/dictionary"
@@ -14,10 +17,8 @@ import (
 	"github.com/web-rabis/reader-workstation-api/internal/manager/reader"
 	"github.com/web-rabis/reader-workstation-api/internal/manager/user"
 	"github.com/web-rabis/reader-workstation-api/internal/resource/http"
-	v5 "github.com/web-rabis/reader-workstation-api/internal/resource/http/dictionary/v1"
-	v4 "github.com/web-rabis/reader-workstation-api/internal/resource/http/reader/v1"
-
-	"github.com/web-rabis/reader-workstation-api/internal/config"
+	dictionaryV1 "github.com/web-rabis/reader-workstation-api/internal/resource/http/dictionary/v1"
+	readerV1 "github.com/web-rabis/reader-workstation-api/internal/resource/http/reader/v1"
 	cherver "github.com/web-rabis/servers/http"
 )
 
@@ -37,11 +38,13 @@ func Run(serversCtx context.Context, opts *config.APIServer,
 	version string) error {
 	resources := []cherver.Resource{
 		http.NewVersionResource("/version", version),
+		http.NewHealthResource("/health", readerMan, orderMan, ebookMan, userMan),
+
 		http.NewFilesResource("/files", opts.ServerConfig.FilesDir),
-		v4.NewAdminReaderResource("/api/v1/reader", authMan, readerMan, userMan, orderMan, ebookMan, controlMan),
-		v5.NewAdminDictionaryResource("/api/v1/dictionary", authMan, dictMan),
-		//swaggerV1.NewSwaggerResource("/swagger", opts.ServerConfig.BasePath, "/files"),
-		//signV1.NewSignResource("/sign", signMan),
+		swaggerV1.NewSwaggerResource("/swagger", opts.ServerConfig.BasePath, "/files"),
+
+		readerV1.NewAdminReaderResource("/api/v1/reader", authMan, readerMan, userMan, orderMan, ebookMan, controlMan),
+		dictionaryV1.NewAdminDictionaryResource("/api/v1/dictionary", authMan, dictMan),
 	}
 	httpSrv := cherver.New(
 		cherver.WithListenAddress(opts.ServerConfig.ListenAddr),

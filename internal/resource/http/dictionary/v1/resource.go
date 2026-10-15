@@ -3,6 +3,7 @@ package v1
 import (
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/jwtauth"
+
 	"github.com/web-rabis/reader-workstation-api/internal/manager/auth"
 	"github.com/web-rabis/reader-workstation-api/internal/manager/dictionary"
 )

@@ -7,21 +7,23 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"
+
 	"github.com/web-rabis/httperrors"
 )
 
-// @Summary Dictionary Sex
-// @Description Dictionary Sex
+// @Summary Renew Reader Registration
+// @Description Extends a reader's registration validity period
 // @Accept json
 // @Produce json
-// @Tags Dictionary
-// @Success 200 {object} reader.Dictionary
+// @Tags Reader
+// @Param id path int true "Reader Ticket Number"
+// @Success 200 {string} string "OK"
 // @Failure 400 {object} httperrors.Response
 // @Failure 401 {object} httperrors.Response
 // @Failure 403 {object} httperrors.Response
 // @Failure 404 {object} httperrors.Response
 // @Failure 500 {object} httperrors.Response
-// @Router /admin/api/v1/auth/sign-in [get]
+// @Router /api/v1/reader/{id}/renewal-registration [put]
 func (res *Resource) renewalRegistration(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
 	if id == "" {

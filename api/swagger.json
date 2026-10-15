@@ -1,0 +1,2263 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "contact": {}
+    },
+    "paths": {
+        "/api/v1/dictionary/academic-degree": {
+            "get": {
+                "description": "Dictionary Academic Degree",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dictionary"
+                ],
+                "summary": "Dictionary Academic Degree",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/dictionary/education": {
+            "get": {
+                "description": "Dictionary Education",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dictionary"
+                ],
+                "summary": "Dictionary Education",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/dictionary/faculty": {
+            "get": {
+                "description": "Dictionary Faculty",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dictionary"
+                ],
+                "summary": "Dictionary Faculty",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/dictionary/institution": {
+            "get": {
+                "description": "Dictionary Institution",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dictionary"
+                ],
+                "summary": "Dictionary Institution",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/dictionary/nationality": {
+            "get": {
+                "description": "Dictionary Nationality",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dictionary"
+                ],
+                "summary": "Dictionary Nationality",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/dictionary/sex": {
+            "get": {
+                "description": "Dictionary Sex",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dictionary"
+                ],
+                "summary": "Dictionary Sex",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/dictionary/social-status": {
+            "get": {
+                "description": "Dictionary Social Status",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dictionary"
+                ],
+                "summary": "Dictionary Social Status",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/github_com_web-rabis_reader-client_model.SocialStatus"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/dictionary/speciality": {
+            "get": {
+                "description": "Dictionary Speciality",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dictionary"
+                ],
+                "summary": "Dictionary Speciality",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/dictionary/type-card": {
+            "get": {
+                "description": "Dictionary Type Card",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dictionary"
+                ],
+                "summary": "Dictionary Type Card",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/github_com_web-rabis_reader-client_model.TypeCard"
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/dictionary/type-card/{id}/backgrounds": {
+            "get": {
+                "description": "Returns the background photo for the given type card id",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Dictionary"
+                ],
+                "summary": "Dictionary Type Card Backgrounds",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Type Card ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "binary",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader": {
+            "get": {
+                "description": "Returns a paginated and filterable list of readers",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "List Readers",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Reader status",
+                        "name": "status",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Reader IIN",
+                        "name": "iin",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Search query",
+                        "name": "query",
+                        "in": "query"
+                    },
+                    {
+                        "type": "boolean",
+                        "description": "Filter by employee flag",
+                        "name": "isEmployee",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Expiration date from (YYYY-MM-DD)",
+                        "name": "expirationDateLow",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Expiration date to (YYYY-MM-DD)",
+                        "name": "expirationDateHigh",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "Page size",
+                        "name": "limit",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "Page number",
+                        "name": "skip",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "Sort order: 1 or -1",
+                        "name": "order",
+                        "in": "query"
+                    },
+                    {
+                        "type": "string",
+                        "description": "Sort key",
+                        "name": "orderBy",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.ReaderListResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "Create Reader User",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Create Reader User",
+                "parameters": [
+                    {
+                        "description": "Request",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.CreateReaderRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Ticket number",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/visits/statistics": {
+            "get": {
+                "description": "Returns today's total visits count and the count of readers currently in the hall",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Visits Statistics",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.VisitsStatisticsResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/visits/today": {
+            "get": {
+                "description": "Returns a paginated list of readers currently checked into the hall today",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Visits Today",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.VisitsTodayResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/{id}": {
+            "get": {
+                "description": "Returns a reader by their ticket number",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Reader By Ticket Number",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.ByIdResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "description": "Updates a reader's data by their ticket number",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Update Reader",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "Request",
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.UpdateReaderRequest"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "Deletes a reader by their ticket number",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Delete Reader",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/{id}/approve": {
+            "put": {
+                "description": "Approves a reader registration request and issues a ticket number and barcode",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Approve Reader",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.ApproveReaderResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/{id}/photo": {
+            "get": {
+                "description": "Returns a reader's photo by their ticket number",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Reader Photo",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "base64-encoded photo",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/{id}/photo/rotate270": {
+            "put": {
+                "description": "Rotates a reader's photo by 270 degrees and saves it",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Rotate Reader Photo 270 Degrees",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "base64-encoded photo",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/{id}/photo/rotate90": {
+            "put": {
+                "description": "Rotates a reader's photo by 90 degrees and saves it",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Rotate Reader Photo 90 Degrees",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "base64-encoded photo",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/{id}/reject": {
+            "put": {
+                "description": "Rejects a reader registration request",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Reject Reader",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/{id}/renewal-registration": {
+            "put": {
+                "description": "Extends a reader's registration validity period",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Renew Reader Registration",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/{id}/visits/check-in": {
+            "post": {
+                "description": "Registers a reader's check-in visit to the reading hall",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Reader Check-In",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/{id}/visits/check-out": {
+            "post": {
+                "description": "Registers a reader's check-out visit from the reading hall",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Reader Check-Out",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "Reader Ticket Number",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/reader/{id}/visits/status": {
+            "get": {
+                "description": "Returns a reader's current visit status by ticket number or barcode, including any active orders",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Reader"
+                ],
+                "summary": "Reader Visit Status",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Reader Ticket Number or Barcode",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.VisitsStatusResponse"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "404": {
+                        "description": "Not Found",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "schema": {
+                            "$ref": "#/definitions/github_com_web-rabis_httperrors.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/health": {
+            "get": {
+                "description": "Проверяет работоспособность сервиса и всех его gRPC-соединений (reader, order, ebook, sso)",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Health"
+                ],
+                "summary": "Health Check",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/internal_resource_http.HealthResponse"
+                        }
+                    },
+                    "503": {
+                        "description": "Service Unavailable",
+                        "schema": {
+                            "$ref": "#/definitions/internal_resource_http.HealthResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "github_com_web-rabis_httperrors.Details": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "description": "application-определенный код ошибки",
+                    "type": "integer"
+                },
+                "message": {
+                    "description": "application-level сообщение, для дебага",
+                    "type": "string"
+                },
+                "status": {
+                    "description": "сообщение пользовательского уровня",
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_httperrors.Response": {
+            "type": "object",
+            "properties": {
+                "error": {
+                    "$ref": "#/definitions/github_com_web-rabis_httperrors.Details"
+                },
+                "validation": {
+                    "description": "ошибки валидации",
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "github_com_web-rabis_order-client_model.Department": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_order-client_model.State": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-client_model.Control": {
+            "type": "object",
+            "properties": {
+                "count": {
+                    "type": "integer"
+                },
+                "department": {
+                    "type": "string"
+                },
+                "departmentF51": {
+                    "type": "string"
+                },
+                "exitDate": {
+                    "type": "string"
+                },
+                "ordersCount": {
+                    "type": "integer"
+                },
+                "ticketNumber": {
+                    "type": "integer"
+                },
+                "userExit": {
+                    "type": "string"
+                },
+                "userVisit": {
+                    "type": "string"
+                },
+                "visitDate": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-client_model.Dictionary": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-client_model.Reader": {
+            "type": "object",
+            "properties": {
+                "academicDegree": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "barcode": {
+                    "type": "string"
+                },
+                "birthDate": {
+                    "type": "string"
+                },
+                "branchId": {
+                    "type": "string"
+                },
+                "course": {
+                    "type": "string"
+                },
+                "dateCorrection": {
+                    "type": "string"
+                },
+                "department": {
+                    "type": "string"
+                },
+                "education": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "expirationDate": {
+                    "type": "string"
+                },
+                "faculty": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                },
+                "firstname": {
+                    "type": "string"
+                },
+                "iin": {
+                    "type": "string"
+                },
+                "institution": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                },
+                "isEmployee": {
+                    "type": "boolean"
+                },
+                "lastVisitDate": {
+                    "type": "string"
+                },
+                "lastname": {
+                    "type": "string"
+                },
+                "middlename": {
+                    "type": "string"
+                },
+                "nationality": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                },
+                "note": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "placeEmployment": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "priznakUdal": {
+                    "type": "string"
+                },
+                "readersHall": {
+                    "type": "string"
+                },
+                "registrationDate": {
+                    "type": "string"
+                },
+                "reregistrationDate": {
+                    "type": "string"
+                },
+                "rfid": {
+                    "type": "string"
+                },
+                "sex": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                },
+                "socialStatus": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.SocialStatus"
+                },
+                "speciality": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Dictionary"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "ticketNumber": {
+                    "type": "integer"
+                },
+                "typeCard": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.TypeCard"
+                },
+                "workPhone": {
+                    "type": "string"
+                },
+                "yearBirth": {
+                    "type": "integer"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-client_model.SocialStatus": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-client_model.TypeCard": {
+            "type": "object",
+            "properties": {
+                "code": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "instagram": {
+                    "type": "string"
+                },
+                "isTerm": {
+                    "type": "boolean"
+                },
+                "photo": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "photoTitle": {
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    }
+                },
+                "type": {
+                    "type": "string"
+                },
+                "web": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.ApproveReaderResponse": {
+            "type": "object",
+            "properties": {
+                "barcode": {
+                    "type": "string"
+                },
+                "expirationDate": {
+                    "type": "string"
+                },
+                "oldTicketNumber": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "ticketNumber": {
+                    "type": "integer"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.ByIdResponse": {
+            "type": "object",
+            "properties": {
+                "result": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Reader"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.CreateReaderRequest": {
+            "type": "object",
+            "properties": {
+                "academicDegree": {
+                    "type": "integer"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "barCode": {
+                    "type": "string"
+                },
+                "birthDate": {
+                    "type": "string"
+                },
+                "course": {
+                    "type": "string"
+                },
+                "education": {
+                    "type": "integer"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "faculty": {
+                    "type": "integer"
+                },
+                "firstname": {
+                    "type": "string"
+                },
+                "iin": {
+                    "type": "string"
+                },
+                "institution": {
+                    "type": "integer"
+                },
+                "lastname": {
+                    "type": "string"
+                },
+                "middlename": {
+                    "type": "string"
+                },
+                "nationality": {
+                    "type": "integer"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "photo": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "sex": {
+                    "type": "integer"
+                },
+                "socialStatus": {
+                    "type": "integer"
+                },
+                "speciality": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "typeCard": {
+                    "type": "integer"
+                },
+                "workPhone": {
+                    "type": "string"
+                },
+                "workPlace": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.Ebook": {
+            "type": "object",
+            "properties": {
+                "author": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "inv": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.EbookInv"
+                },
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.EbookInv": {
+            "type": "object",
+            "properties": {
+                "barcode": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "invNumber": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.Magazine": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "integer"
+                },
+                "inv": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.MagazineInv"
+                },
+                "nkr": {
+                    "type": "integer"
+                },
+                "number": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "year": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.MagazineInv": {
+            "type": "object",
+            "properties": {
+                "barcode": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "invNumber": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.Order": {
+            "type": "object",
+            "properties": {
+                "department": {
+                    "$ref": "#/definitions/github_com_web-rabis_order-client_model.Department"
+                },
+                "ebook": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.Ebook"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "magazine": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.Magazine"
+                },
+                "orderedAt": {
+                    "type": "string"
+                },
+                "status": {
+                    "$ref": "#/definitions/github_com_web-rabis_order-client_model.State"
+                },
+                "type": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.ReaderListResponse": {
+            "type": "object",
+            "properties": {
+                "count": {
+                    "type": "integer"
+                },
+                "result": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Reader"
+                    }
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.UpdateReaderRequest": {
+            "type": "object",
+            "properties": {
+                "academicDegree": {
+                    "type": "integer"
+                },
+                "address": {
+                    "type": "string"
+                },
+                "barCode": {
+                    "type": "string"
+                },
+                "birthDate": {
+                    "type": "string"
+                },
+                "course": {
+                    "type": "string"
+                },
+                "education": {
+                    "type": "integer"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "faculty": {
+                    "type": "integer"
+                },
+                "firstname": {
+                    "type": "string"
+                },
+                "iin": {
+                    "type": "string"
+                },
+                "institution": {
+                    "type": "integer"
+                },
+                "isEmployee": {
+                    "type": "boolean"
+                },
+                "lastname": {
+                    "type": "string"
+                },
+                "middlename": {
+                    "type": "string"
+                },
+                "nationality": {
+                    "type": "integer"
+                },
+                "phone": {
+                    "type": "string"
+                },
+                "photo": {
+                    "type": "string"
+                },
+                "position": {
+                    "type": "string"
+                },
+                "readersHall": {
+                    "type": "string"
+                },
+                "sex": {
+                    "type": "integer"
+                },
+                "socialStatus": {
+                    "type": "integer"
+                },
+                "speciality": {
+                    "type": "integer"
+                },
+                "status": {
+                    "type": "string"
+                },
+                "typeCard": {
+                    "type": "integer"
+                },
+                "workPhone": {
+                    "type": "string"
+                },
+                "workPlace": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.VisitsStatisticsResponse": {
+            "type": "object",
+            "properties": {
+                "all": {
+                    "type": "integer"
+                },
+                "inHall": {
+                    "type": "integer"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.VisitsStatusResponse": {
+            "type": "object",
+            "properties": {
+                "orders": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.Order"
+                    }
+                },
+                "reader": {
+                    "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Reader"
+                },
+                "since": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        },
+        "github_com_web-rabis_reader-workstation-api_internal_resource_http_reader_v1_dto.VisitsTodayResponse": {
+            "type": "object",
+            "properties": {
+                "count": {
+                    "type": "integer"
+                },
+                "result": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/github_com_web-rabis_reader-client_model.Control"
+                    }
+                }
+            }
+        },
+        "internal_resource_http.HealthResponse": {
+            "type": "object",
+            "properties": {
+                "dependencies": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                },
+                "status": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

@@ -5,6 +5,7 @@ import (
 
 	"github.com/go-chi/render"
 	"github.com/web-rabis/httperrors"
+	readerModel "github.com/web-rabis/reader-client/model"
 )
 
 // @Summary Dictionary Sex
@@ -12,14 +13,15 @@ import (
 // @Accept json
 // @Produce json
 // @Tags Dictionary
-// @Success 200 {object} reader.Dictionary
+// @Success 200 {array} readerModel.Dictionary
 // @Failure 400 {object} httperrors.Response
 // @Failure 401 {object} httperrors.Response
 // @Failure 403 {object} httperrors.Response
 // @Failure 404 {object} httperrors.Response
 // @Failure 500 {object} httperrors.Response
-// @Router /sex [get]
+// @Router /api/v1/dictionary/sex [get]
 func (res *Resource) getSex(w http.ResponseWriter, r *http.Request) {
+	var sexList []*readerModel.Dictionary
 	_, sexList, err := res.dictionaryMan.SexList(r.Context(), nil)
 	if err != nil {
 		_ = render.Render(w, r, httperrors.Internal(err))

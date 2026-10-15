@@ -22,9 +22,9 @@ COPY --from=builder /etc/ssl/certs /etc/ssl/certs
 RUN addgroup -S reader && adduser -S reader -G reader
 
 # копируем документацию
-#RUN mkdir -p /usr/share/reader
-#COPY --from=builder /go/src/github.com/web-rabis/reader-workstation-api/api /usr/share/api
-#RUN chown -R reader:reader /usr/share/reader
+RUN mkdir -p /usr/share/api
+COPY --from=builder /go/src/github.com/web-rabis/reader-workstation-api/api /usr/share/api
+RUN chown -R reader:reader /usr/share/api
 
 ENTRYPOINT [ "/bin/reader-workstation-api" ]
 
@@ -37,8 +37,8 @@ COPY --from=builder /go/bin/reader-workstation-api /bin/reader-workstation-api
 # копируем сертификаты из alpine
 COPY --from=alpine /etc/ssl/certs /etc/ssl/certs
 
-## копируем документацию
-#COPY --from=alpine /usr/share/reader /usr/share/reader
+# копируем документацию
+COPY --from=alpine /usr/share/api /usr/share/api
 
 # копируем пользователя и группу из alpine
 COPY --from=alpine /etc/passwd /etc/passwd

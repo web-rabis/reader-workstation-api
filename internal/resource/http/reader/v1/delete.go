@@ -11,18 +11,19 @@ import (
 	"github.com/web-rabis/httperrors"
 )
 
-// @Summary Dictionary Sex
-// @Description Dictionary Sex
+// @Summary Delete Reader
+// @Description Deletes a reader by their ticket number
 // @Accept json
 // @Produce json
-// @Tags Dictionary
-// @Success 200 {object} reader.Dictionary
+// @Tags Reader
+// @Param id path int true "Reader Ticket Number"
+// @Success 200 {string} string "OK"
 // @Failure 400 {object} httperrors.Response
 // @Failure 401 {object} httperrors.Response
 // @Failure 403 {object} httperrors.Response
 // @Failure 404 {object} httperrors.Response
 // @Failure 500 {object} httperrors.Response
-// @Router /admin/api/v1/auth/sign-in [get]
+// @Router /api/v1/reader/{id} [delete]
 func (res *Resource) delete(w http.ResponseWriter, r *http.Request) {
 	id := chi.URLParam(r, "id")
 	if id == "" {

@@ -9,24 +9,26 @@ import (
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/render"
+
 	"github.com/web-rabis/httperrors"
 	ordermodel "github.com/web-rabis/order-client/model"
 	readerModel "github.com/web-rabis/reader-client/model"
 	"github.com/web-rabis/reader-workstation-api/internal/resource/http/reader/v1/dto"
 )
 
-// @Summary Dictionary Sex
-// @Description Dictionary Sex
+// @Summary Reader Visit Status
+// @Description Returns a reader's current visit status by ticket number or barcode, including any active orders
 // @Accept json
 // @Produce json
-// @Tags Dictionary
-// @Success 200 {object} reader.Dictionary
+// @Tags Reader
+// @Param id path string true "Reader Ticket Number or Barcode"
+// @Success 200 {object} dto.VisitsStatusResponse
 // @Failure 400 {object} httperrors.Response
 // @Failure 401 {object} httperrors.Response
 // @Failure 403 {object} httperrors.Response
 // @Failure 404 {object} httperrors.Response
 // @Failure 500 {object} httperrors.Response
-// @Router /admin/api/v1/auth/sign-in [get]
+// @Router /api/v1/reader/{id}/visits/status [get]
 func (res *Resource) visitsStatus(w http.ResponseWriter, r *http.Request) {
 	reader_, status, err := res.getReaderByBarcodeOrTicketNumber(r)
 	if err != nil {

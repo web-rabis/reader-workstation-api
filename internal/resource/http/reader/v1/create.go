@@ -5,30 +5,30 @@ import (
 	"errors"
 	"net/http"
 
-	readerModel "github.com/web-rabis/reader-client/model"
-	dto2 "github.com/web-rabis/reader-workstation-api/internal/resource/http/reader/v1/dto"
-	"github.com/web-rabis/reader-workstation-api/internal/utils"
-
 	"github.com/go-chi/render"
+
 	"github.com/web-rabis/httperrors"
+	readerModel "github.com/web-rabis/reader-client/model"
+	readerDto "github.com/web-rabis/reader-workstation-api/internal/resource/http/reader/v1/dto"
+	"github.com/web-rabis/reader-workstation-api/internal/utils"
 )
 
 // @Summary Create Reader User
 // @Description Create Reader User
 // @Accept json
 // @Produce json
-// @Tags ReaderUser
-// @Param body body dto.CreateReaderUserRequest true "Request"
-// @Success 200 {object} dto.CreateReaderUserResponse
+// @Tags Reader
+// @Param body body readerDto.CreateReaderRequest true "Request"
+// @Success 200 {integer} int64 "Ticket number"
 // @Failure 400 {object} httperrors.Response
 // @Failure 401 {object} httperrors.Response
 // @Failure 403 {object} httperrors.Response
 // @Failure 404 {object} httperrors.Response
 // @Failure 500 {object} httperrors.Response
-// @Router /reader-user [post]
+// @Router /api/v1/reader [post]
 func (res *Resource) create(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
-	var request dto2.CreateReaderRequest
+	var request readerDto.CreateReaderRequest
 	var err error
 
 	if err = json.NewDecoder(r.Body).Decode(&request); err != nil {
