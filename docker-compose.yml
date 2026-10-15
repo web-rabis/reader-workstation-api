@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  nlrk-reader-workstation-api:
+    container_name: nlrk-reader-workstation-api
+    image: shaisarov/nlrk-reader-workstation-api
+    restart: unless-stopped
+    build:
+      context: .
+      args:
+        - http_proxy
+        - https_proxy
+        - no_proxy
+    ports:
+      - "8587:8587"
+      - "8907:8907"
+      - "7587:7587"
+    environment:
+      - LISTEN=:8587
+      - GRPC_LISTEN=:8907
+      - METRICS_LISTEN=:7587
+      - DEBUG=1
+    networks:
+      - web_rabis_network
+networks:
+  web_rabis_network:
+    external: true

@@ -1,0 +1,28 @@
+syntax = "proto3";
+package order;
+option go_package = "./protobuf;protobuf";
+
+message Department {
+  int64 id = 1;
+  string code = 2;
+  string name = 3;
+  string type = 4;
+}
+
+message State {
+  int64 id = 1;
+  string code = 2;
+  string name = 3;
+}
+
+message ReasonRejection {
+  int64 id = 1;
+  string code = 2;
+  string name = 3;
+}
+
+message ReasonRejectionFilters {
+}
+message DepartmentFilters {
+
+}

@@ -1,0 +1,40 @@
+package client
+
+import (
+	"context"
+
+	"github.com/web-rabis/order-client/model"
+)
+
+type Base interface {
+	Connect() error
+	Close() error
+	Order() OrderService
+	Dictionary() DictionaryService
+}
+
+//go:generate go run github.com/vektra/mockery/v2@v2.53 --name OrderService
+type OrderService interface {
+	List(ctx context.Context, paging *model.Paging, filter *model.OrderFilters) (int64, []*model.Order, error)
+	ById(ctx context.Context, id int64) (*model.Order, error)
+	Reject(ctx context.Context, ids []int64, reasonRejectId int64, user *model.User) error
+	CancelReject(ctx context.Context, ids []int64, user *model.User) error
+	Redirect(ctx context.Context, ids []int64, departmentId int64, user *model.User) error
+	Postponed(ctx context.Context, ids []int64, user *model.User) error
+	Return(ctx context.Context, ids []int64, user *model.User) error
+	Issue(ctx context.Context, ids []model.IssueOrder, user *model.User) error
+	Archive(ctx context.Context, ids []int64, user *model.User) error
+	SendToPf(ctx context.Context, ids []int64, user *model.User) error
+	ReturnToStorage(ctx context.Context, ids []int64, user *model.User) error
+	StateCounts(ctx context.Context, filters *model.StateCountFilters) ([]*model.StateCount, error)
+	CreateOnDemanIssue(ctx context.Context, ticketNumber, ebookId, departmentId, invId int64, user *model.User) (int64, error)
+	Audit(ctx context.Context, orderId int64) ([]*model.OrderAudit, error)
+}
+
+//go:generate go run github.com/vektra/mockery/v2@v2.53 --name DictionaryService
+type DictionaryService interface {
+	ReasonRejectionList(ctx context.Context, paging *model.Paging, filter *model.ReasonRejectionFilters) (int64, []*model.ReasonRejection, error)
+	ReasonRejectionById(ctx context.Context, id int64) (*model.ReasonRejection, error)
+	DepartmentList(ctx context.Context, paging *model.Paging, filter *model.DepartmentFilters) (int64, []*model.Department, error)
+	DepartmentById(ctx context.Context, id int64) (*model.Department, error)
+}
