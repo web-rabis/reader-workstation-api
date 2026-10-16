@@ -16,9 +16,9 @@ services:
     environment:
       - LISTEN=:8594
       - READER_GRPC_ADDRESS=nlrk-reader:8906
-      - ORDER_GRPC_ADDRESS=nlrk-reader:8909
-      - EBOOK_GRPC_ADDRESS=nlrk-reader:8911
-      - SSO_GRPC_ADDRESS=nlrk-reader:8908
+      - ORDER_GRPC_ADDRESS=nlrk-order:8909
+      - EBOOK_GRPC_ADDRESS=nlrk-ebook:8911
+      - SSO_GRPC_ADDRESS=nlrk-sso:8908
       - BASE_PATH=/
       - DEBUG=1
     networks:
