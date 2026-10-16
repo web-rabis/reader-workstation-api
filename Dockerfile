@@ -1,7 +1,7 @@
 #
 # Контейнер сборки
 #
-FROM golang:1.24 as builder
+FROM golang:1.26 as builder
 
 
 ENV CGO_ENABLED=0
@@ -9,7 +9,7 @@ ENV CGO_ENABLED=0
 COPY . /go/src/github.com/web-rabis/reader-workstation-api
 WORKDIR /go/src/github.com/web-rabis/reader-workstation-api
 RUN \
-    version=git describe --abbrev=6 --always --tag; \
+    version=$(git describe --abbrev=6 --always --tag); \
     echo "version=$version" && \
     cd cmd/apiserver && \
     go build -a -tags reader_workstation_api -installsuffix reader_workstation_api -ldflags "-X main.version=${version} -s -w" -o /go/bin/reader-workstation-api -mod vendor
