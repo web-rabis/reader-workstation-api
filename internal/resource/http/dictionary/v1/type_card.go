@@ -4,9 +4,9 @@ import (
 	"net/http"
 
 	"github.com/go-chi/render"
+	"github.com/web-rabis/reader-workstation-api/internal/model"
 
 	"github.com/web-rabis/httperrors"
-	readerModel "github.com/web-rabis/reader-client/model"
 )
 
 // @Summary Dictionary Type Card
@@ -22,11 +22,10 @@ import (
 // @Failure 500 {object} httperrors.Response
 // @Router /api/v1/dictionary/type-card [get]
 func (res *Resource) getTypeCard(w http.ResponseWriter, r *http.Request) {
-	var list []*readerModel.TypeCard
-	_, list, err := res.dictionaryMan.TypeCardList(r.Context(), nil)
+	count, l, err := res.dictionaryMan.TypeCardList(r.Context(), nil)
 	if err != nil {
 		_ = render.Render(w, r, httperrors.Internal(err))
 		return
 	}
-	render.JSON(w, r, list)
+	render.JSON(w, r, model.ListResponse{Count: count, Result: l})
 }

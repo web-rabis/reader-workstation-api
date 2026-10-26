@@ -118,7 +118,7 @@ func (res *Resource) getOrders(ctx context.Context, reader_ *readerModel.Reader)
 	if err != nil {
 		return nil, errors.New("orders by ticket number not found")
 	}
-	dtoOrders := make([]dto.Order, 0, len(orders))
+	dtoOrders := make([]dto.Order, len(orders), len(orders))
 	for i, order := range orders {
 		o := dto.Order{
 			Id:         order.Id,

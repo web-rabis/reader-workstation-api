@@ -5,6 +5,7 @@ import (
 
 	"github.com/go-chi/render"
 	"github.com/web-rabis/httperrors"
+	"github.com/web-rabis/reader-workstation-api/internal/model"
 
 	readerModel "github.com/web-rabis/reader-client/model"
 )
@@ -27,10 +28,10 @@ func (res *Resource) getEducation(w http.ResponseWriter, r *http.Request) {
 		_ = render.Render(w, r, httperrors.Internal(err))
 		return
 	}
-	_, l, err := res.dictionaryMan.EducationList(r.Context(), paging)
+	count, l, err := res.dictionaryMan.EducationList(r.Context(), paging)
 	if err != nil {
 		_ = render.Render(w, r, httperrors.Internal(err))
 		return
 	}
-	render.JSON(w, r, l)
+	render.JSON(w, r, model.ListResponse{Count: count, Result: l})
 }

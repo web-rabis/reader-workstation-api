@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"github.com/go-chi/render"
+	"github.com/web-rabis/reader-workstation-api/internal/model"
 
 	"github.com/web-rabis/httperrors"
 	readerModel "github.com/web-rabis/reader-client/model"
@@ -27,11 +28,11 @@ func (res *Resource) getAcademicDegree(w http.ResponseWriter, r *http.Request) {
 		_ = render.Render(w, r, httperrors.Internal(err))
 		return
 	}
-	_, l, err := res.dictionaryMan.AcademicDegreeList(r.Context(), paging)
+	count, l, err := res.dictionaryMan.AcademicDegreeList(r.Context(), paging)
 	if err != nil {
 		println(err.Error())
 		_ = render.Render(w, r, httperrors.Internal(err))
 		return
 	}
-	render.JSON(w, r, l)
+	render.JSON(w, r, model.ListResponse{Count: count, Result: l})
 }
