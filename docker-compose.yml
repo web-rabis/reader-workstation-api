@@ -15,6 +15,7 @@ services:
       - "8594:8594"
     environment:
       - LISTEN=:8594
+      - JWT_KEY=QowdicuD2K6h7oVpI4z7GjeX5COGRY52
       - READER_GRPC_ADDRESS=nlrk-reader:8906
       - ORDER_GRPC_ADDRESS=nlrk-order:8909
       - EBOOK_GRPC_ADDRESS=nlrk-ebook:8911
