@@ -28,6 +28,10 @@ func (res *Resource) getNationality(w http.ResponseWriter, r *http.Request) {
 		_ = render.Render(w, r, httperrors.Internal(err))
 		return
 	}
+	if paging.SortKey == "" {
+		paging.SortKey = "name"
+		paging.SortVal = 1
+	}
 	count, l, err := res.dictionaryMan.NationalityList(r.Context(), paging)
 	if err != nil {
 		_ = render.Render(w, r, httperrors.Internal(err))
