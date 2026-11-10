@@ -94,7 +94,7 @@ func (d DictionaryService) SocialStatusList(ctx context.Context, paging *model.P
 }
 
 func (d DictionaryService) SpecialityList(ctx context.Context, paging *model.Paging) (int64, []*model.Dictionary, error) {
-	response, err := d.client.SexList(ctx, dictionaryListRequest(paging))
+	response, err := d.client.SpecialityList(ctx, dictionaryListRequest(paging))
 	switch status.Code(err) {
 	case codes.OK:
 		return response.Count, model.DictionaryListFromProto(response.Result), nil
