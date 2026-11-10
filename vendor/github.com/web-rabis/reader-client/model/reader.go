@@ -196,7 +196,7 @@ func ReaderFromProto(r *protobuf.Reader) *Reader {
 		t := r.DateCorrection.AsTime()
 		datecorrection = &t
 	}
-	if birthdate != nil {
+	if r.BirthDate != nil {
 		t := r.BirthDate.AsTime()
 		birthdate = &t
 	}
